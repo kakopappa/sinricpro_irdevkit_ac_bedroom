@@ -87,7 +87,7 @@ void setupWiFi() {
   Serial.printf("[WiFi]: Hostname is \"%s\"\r\n", HOSTNAME);
 }
 
-bool onTemperatureSenosrPowerState(const String &deviceId, bool &state) {
+bool onTemperatureSensorPowerState(const String &deviceId, bool &state) {
   Serial.printf("Device %s turned %s (via SinricPro) \r\n", deviceId.c_str(), state?"on":"off");
   return true; // request handled properly
 }
@@ -133,7 +133,7 @@ void setupSinricPro() {
   mySwitch.onPowerState(onSwitchPowerState); 
 
   SinricProTemperaturesensor &mySensor = SinricPro[TEMPERATURE_SENSOR_ID];
-  mySensor.onPowerState(onTemperatureSenosrPowerState);
+  mySensor.onPowerState(onTemperatureSensorPowerState);
   
   SinricPro.onConnected([](){ Serial.printf("Connected to SinricPro\r\n"); }); 
   SinricPro.onDisconnected([](){ Serial.printf("Disconnected from SinricPro\r\n"); });
