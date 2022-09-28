@@ -1,0 +1,1 @@
+# sinricpro_irdevkit_ac_bedroom
