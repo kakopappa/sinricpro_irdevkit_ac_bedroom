@@ -1,1 +1,3 @@
-# SinricPro + IRDEVKIT bedroom AC On/Off with schedule
+# SinricPro + IRDEVKIT bedroom AC 
+
+wemos d1 mini sketch programmed to turn on/off bed room AC
